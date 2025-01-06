@@ -21,6 +21,20 @@ else
     else
         echo "mysql-sever already installed!"
     fi
+    dnf list installed git
+    if [ $? -ne 0 ]
+    then
+        dnf install git -y
+        if [ $? -ne 0 ]
+        then
+            echo "git is not installed"
+            exit 1
+        else
+            echo "git is installed sucessfully"
+        fi
+    else
+        echo "git already installed!"
+    fi
 fi
 
 
