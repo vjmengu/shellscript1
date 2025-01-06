@@ -10,7 +10,7 @@ else
     dnf list installed mysql-server
     if [ $? -ne 0 ]
     then
-        dnf install mysql-sever -y
+        dnf install mysql-server -y
         if [ $? -ne 0 ]
         then
             echo "mysql-sever is not installed"
